@@ -6,10 +6,8 @@ pipeline {
   stages {
     stage ('Initialize') {
       steps {
-        sh '''
-		echo "PATH = $(PATH)"
-	   '''
-
+        sh "echo \$PWD"
+        sh "whoami"
       }
     }
 
