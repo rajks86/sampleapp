@@ -13,7 +13,6 @@ pipeline {
 
       }
     }
-  }
 
     stage ('Build') {
       steps {
@@ -27,5 +26,6 @@ pipeline {
           sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@13.235.27.154:/var/lib/tomcat9/webapps/webapp.war'
         }
       }
+    }
   }
 }
